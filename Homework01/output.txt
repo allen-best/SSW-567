@@ -2,8 +2,8 @@ Allens-MacBook-Pro:SSW-567 allenbest$ python3 homework01/triangle-test.py
 classifyTriangle(1,2,3)=Scalene
 classifyTriangle(1,1,1)=Equilateral
 classifyTriangle(3,4,5)=Right
-......
+.......
 ----------------------------------------------------------------------
-Ran 6 tests in 0.000s
+Ran 7 tests in 0.000s
 
 OK

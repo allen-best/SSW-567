@@ -71,16 +71,27 @@ class TestTriangles(unittest.TestCase):
     def testSetIsoceles(self): # test invalid inputs
         # your tests go here.  Include as many tests as you'd like
         self.assertEqual(classifyTriangle(3,4,3),'Isoceles','3,4,3 is a Isoceles triangle')
-        self.assertEqual(classifyTriangle(13,6,13),'Isoceles','3,4,5 is a Isoceles triangle')
-        self.assertEqual(classifyTriangle(23,23,8),'Isoceles','3,4,5 is a Isoceles triangle')
-        self.assertEqual(classifyTriangle(64,90,90),'Isoceles','3,4,5 is a Isoceles triangle')
+        self.assertEqual(classifyTriangle(13,6,13),'Isoceles','13,6,13 is a Isoceles triangle')
+        self.assertEqual(classifyTriangle(23,23,8),'Isoceles','23,23,8 is a Isoceles triangle')
+        self.assertEqual(classifyTriangle(64,90,90),'Isoceles','64,90,90 is a Isoceles triangle')
 
     def testSetScalene(self): # test invalid inputs
         # your tests go here.  Include as many tests as you'd like
-        self.assertEqual(classifyTriangle(10,15,30),'Scalene','3,4,5 is a Scalene triangle')
-        self.assertEqual(classifyTriangle(1,2,3),'Scalene','3,4,5 is a Scalene triangle')
-        self.assertEqual(classifyTriangle(7,10,13),'Scalene','3,4,5 is a Scalene triangle')
-        self.assertEqual(classifyTriangle(17,86,12),'Scalene','3,4,5 is a Scalene triangle')
+        self.assertEqual(classifyTriangle(10,15,30),'Scalene','10,15,30 is a Scalene triangle')
+        self.assertEqual(classifyTriangle(1,2,3),'Scalene','1,2,3 is a Scalene triangle')
+        self.assertEqual(classifyTriangle(7,10,13),'Scalene','7,10,13 is a Scalene triangle')
+        self.assertEqual(classifyTriangle(17,86,12),'Scalene','17,86,12 is a Scalene triangle')
+
+    def testSetFail(self): # test invalid inputs
+        # your tests go here.  Include as many tests as you'd like
+        self.assertNotEqual(classifyTriangle(10,15,10),'Scalene','10,15,10 is a Isoceles triangle')
+        self.assertNotEqual(classifyTriangle(2,2,2),'Isoceles','2,2,2 is a Equilateral triangle')
+        self.assertNotEqual(classifyTriangle(21,220,221),'Equilateral','21,220,221 is a Right triangle')
+        self.assertNotEqual(classifyTriangle(17,87,12),'Right','17,87,12 is a Scalene triangle')
+        self.assertNotEqual(classifyTriangle(25,312,313),'Scalene','25,312,313 is a Right triangle')
+        self.assertNotEqual(classifyTriangle(11,2,38),'Isoceles','11,2,38 is a Scalene triangle')
+        self.assertNotEqual(classifyTriangle(98,10,98),'Equilateral','98,10,98 is a Isoceles triangle')
+        self.assertNotEqual(classifyTriangle(77,77,77),'Right','77,77,77 is a Equilateral triangle')
 
     def testSet1(self): # test invalid inputs
         # your tests go here.  Include as many tests as you'd like
